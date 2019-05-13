@@ -20,7 +20,7 @@ var orm = {
         };
     },
     updateOne: function (table, condition, cb) {
-        connection.query("update " + table + " set devoured=true where id = " + condition + ";", function (err, result) {
+        connection.query("update " + table + " set devoured=true where id=" + condition + ";", function (err, result) {
             if (err) {
                 throw err;
             }

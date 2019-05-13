@@ -2,20 +2,19 @@ $(function () {
     $(".change-eaten").on("click", function (event) {
         var id = $(this).data("id");
         var newEaten = $(this).data("neweaten");
-        console.log(newEaten)
+
         var newEatenState = {
-            burger_id: id,
-            devoured: newEaten
+            devoured: true
         };
-        $.ajax("burgers/update/" + id, {
+        console.log(newEatenState)
+        $.ajax("/burgers/update/" + id, {
             type: "PUT",
             data: newEatenState
         }).then(
             function () {
                 console.log("changed devoured to", newEaten);
-                location.reload();
-            }
-        );
+            });
+            location.reload();
     });
     $(".create-form").on("submit", function (event) {
         event.preventDefault();
@@ -30,8 +29,7 @@ $(function () {
         }).then(
             function () {
                 console.log("created new burger");
-                location.reload();
-            }
-        );
+            });
+        location.reload();
     });
 });

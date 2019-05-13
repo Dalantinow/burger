@@ -19,9 +19,8 @@ router.post("/api/burgers/insert", function (req, res) {
    })
 });
 router.put("/burgers/update", function(req, res){
-    var condition = "id = " + req.params.id
-    console.log(condition)
-    burger.updateOne(req.params.id, function(result){
+    console.log(req.body)
+    burger.updateOne(req.body.burger_id, function(result){
         res.redirect("/");
     });
 });
