@@ -18,7 +18,7 @@ router.post("/api/burgers/insert", function (req, res) {
        res.redirect("/")
    })
 });
-router.put("/burgers/update", function(req, res){
+router.put("/burgers/updateg", function(req, res){
     console.log(req.body)
     burger.updateOne(req.body.burger_id, function(result){
         res.redirect("/");
