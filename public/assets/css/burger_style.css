@@ -2,19 +2,36 @@
     border: 5px solid black;
     float: left;
     margin: 20px;
-    padding: 20px
+    padding: 20px;
+    background-color: antiquewhite;
+    text-align: center;
 }
-
+h1 {
+    padding: 10px;
+    border: 5px dashed black;
+    background-color: antiquewhite;
+    text-align: center;
+    width: 400px;
+    margin-left: 250px;
+}
 .jawn {
     float: left;
     width: 250px;
-    border: 5px dotted blue;
-    padding: 20px
+    border: 5px dotted black;
+    padding: 20px;
+    background-color: antiquewhite;
+    text-align: center;
 }
 
 .jawn2 {
-    border: 5px solid green;
+    border: 5px solid black;
     float: left;
     margin: 20px;
-    padding: 20px
+    padding: 20px;
+    background-color: antiquewhite;
+    text-align: center;
 }
+body {
+    background-image: url("burger.jpg");
+    background-color: #cccccc;
+  }
