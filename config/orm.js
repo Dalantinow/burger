@@ -19,8 +19,8 @@ var orm = {
             cb(result);
         };
     },
-    updateOne: function (table, condition, cb) {
-        connection.query("update " + table + " set devoured=true where id=" + condition + ";", function (err, result) {
+    updateOne: function (condition, cb) {
+        connection.query("update burgers set devoured=true where " + condition + ";", function (err, result) {
             if (err) {
                 throw err;
             }

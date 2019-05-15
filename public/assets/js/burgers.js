@@ -4,7 +4,7 @@ $(function () {
         var newEaten = $(this).data("neweaten");
 
         var newEatenState = {
-            devoured: true
+            devoured: newEaten
         };
         console.log(newEatenState)
         $.ajax("/burgers/update/" + id, {
@@ -21,7 +21,7 @@ $(function () {
 
         var newBurger = {
             burger_name: $("#burg").val().trim(),
-            devoured: "0"
+            devoured: false
         };
         $.ajax("/api/burgers/insert", {
             type: "POST",
